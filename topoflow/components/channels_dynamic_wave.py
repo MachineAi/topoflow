@@ -74,6 +74,8 @@ class channels_component(channels_base.channels_component):
     #   get_attribute()
     #-------------------------------------------------------------------
     def update_velocity(self):
+    
+    	dinv = 1 ################## ADDED THIS TO MAKE IT RUN! DON'T KNOW WHAT IT IS! ##############
 
         #--------------------------------------------------------
         # NOTES:  This update to u uses values of u, d, Q, and

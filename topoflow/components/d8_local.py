@@ -2005,11 +2005,12 @@ class d8_component(d8_base.d8_component):
             # Find all pixels downstream of IDs and redefine
             # IDs to include all pixels downstream.
             #-------------------------------------------------
+            ########### changed the variable name np to npx because it conflicted with numpy as np
             while (True):
                 pIDs = self.parent_ID_grid.flat[ kIDs ]
                 pIDs = np.unique( pIDs )
                 nk   = kIDs.size  # (2/29/12)
-                np   = pIDs.size
+                npx   = pIDs.size
 
                 #---------------------------------------------------
                 # NOTE: This block is costly as written and kept
@@ -2025,11 +2026,11 @@ class d8_component(d8_base.d8_component):
                 # w_backflow = np.in1d( pIDs, kIDs )  # (11/20/11)
                 # if (w_backflow.size != 0):
                 
-                # if (nk == 2) and (np == 2):
+                # if (nk == 2) and (npx == 2):
                 #     if (np.all( kIDs == pIDs )):
                 #         break
                 #
-                # if (nk == np) and (np <= 5):
+                # if (nk == npx) and (npx <= 5):
                 #     if (np.all( kIDs == pIDs )):
                 #         break    
                 #---------------------------------------------------                
@@ -2057,9 +2058,9 @@ class d8_component(d8_base.d8_component):
                 #############################################
                 ## if (self.PERTURB_TEST):
                 ##     print 'pIDs =', pIDs 
-                # if (np == 1): break  # (parent_ID[0] = 0)
+                # if (npx == 1): break  # (parent_ID[0] = 0)
                 #############################################
-                if (np == 1) and (pIDs[0] == 0):
+                if (npx == 1) and (pIDs[0] == 0):
                     break
                 #############################################
 

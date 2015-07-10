@@ -941,7 +941,7 @@ class BMI_component:
         # This will set in_directory, out_directory,
         # site_prefix and case_prefix
         #---------------------------------------------
-        self.initialize( cfg_prefix=cfg_prefix, mode='driver' )
+        self.initialize(cfg_prefix = cfg_prefix, mode='driver' )
             
         #----------------------------------------------------------- 
         # Note:  If the number of timesteps is specified in a

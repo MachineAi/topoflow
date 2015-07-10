@@ -801,6 +801,7 @@ class topoflow_driver( BMI_base.BMI_component ):
         # Count number of steps with same Q-value
         #------------------------------------------
         delta_Q = np.absolute(self.Q_outlet - self.Q_last)
+        
         if ( delta_Q <= self.steady_tol ):
             ## print '(time_index, dQ) =', self.time_index, delta_Q
             self.n_same += 1
